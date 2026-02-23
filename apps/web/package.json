@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "cross-env PORT=6006 NODE_OPTIONS='--no-warnings' next dev",
     "build": "next build",
+    "start": "next start",
     "serve": "next start",
     "lint": "next lint --fix --dir app --dir components --dir lib",
     "pretty": "prettier --write ."
