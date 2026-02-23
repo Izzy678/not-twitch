@@ -9,9 +9,12 @@ async function bootstrap() {
   // Use Socket.IO adapter for WebSocket support
   app.useWebSocketAdapter(new IoAdapter(app));
 
-  // Enable CORS for frontend communication
+  // Enable CORS for frontend communication (set CORS_ORIGIN on VPS e.g. https://your-domain.com)
+  const corsOrigin = process.env.CORS_ORIGIN
+    ? process.env.CORS_ORIGIN.split(',').map((s) => s.trim())
+    : ['http://localhost:6006', 'http://localhost:3000'];
   app.enableCors({
-    origin: ['http://localhost:6006', 'http://localhost:3000'],
+    origin: corsOrigin,
     credentials: true,
   });
 

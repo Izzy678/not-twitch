@@ -13,7 +13,9 @@ import {
   
   @WebSocketGateway({
     cors: {
-      origin: ['http://localhost:6006', 'http://localhost:3000'],
+      origin: process.env.CORS_ORIGIN
+        ? process.env.CORS_ORIGIN.split(',').map((s) => s.trim())
+        : ['http://localhost:6006', 'http://localhost:3000'],
       credentials: true,
     },
     namespace: '/stream',
