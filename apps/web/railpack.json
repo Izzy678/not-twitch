@@ -1,8 +1,0 @@
-{
-  "build": {
-    "buildCommand": "yarn run build"
-  },
-  "deploy": {
-    "startCommand": "node .next/standalone/server.js"
-  }
-}

@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "cross-env PORT=6006 NODE_OPTIONS='--no-warnings' next dev",
-    "build": "next build",
-    "start": "node .next/standalone/server.js",
-    "serve": "node .next/standalone/server.js",
+    "build": "next build && node scripts/copy-standalone-static.js",
+    "start": "node .next/standalone/apps/web/server.js",
+    "serve": "node .next/standalone/apps/web/server.js",
     "lint": "next lint --fix --dir app --dir components --dir lib",
     "pretty": "prettier --write ."
   },

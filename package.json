@@ -1,6 +1,7 @@
 {
   "name": "monorepo-starter",
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -11,7 +12,5 @@
     "turbo": "latest",
     "prettier": "^3.2.5"
   },
-  "workspaces": [
-    "apps/*"
-  ]
+  "workspaces": ["apps/*"]
 }
