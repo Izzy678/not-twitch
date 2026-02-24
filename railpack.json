@@ -1,0 +1,6 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "deploy": {
+    "startCommand": "cd apps/web && HOSTNAME=0.0.0.0 node .next/standalone/apps/web/server.js"
+  }
+}
